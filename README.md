@@ -73,4 +73,4 @@ AdaFace IR18 demonstrated strong face verification performance under standard be
 ## 9. Acknowledgements
 The project uses the pretrained AdaFace model developed by Kim et al. (2022) 
 
-Original AdaFace repository: https://github.com/deepinsight/insightface/tree/master/recognition/_datasets_
+Original AdaFace repository: [InsightFace Datasets](https://github.com/deepinsight/insightface/tree/master/recognition/_datasets_)
