@@ -30,12 +30,19 @@ The model was evaluated using six face verification benchmark datasets:
 |---------|-----------------------|
 | LFW | 99.23 |
 | CFP-FF | 99.10 |
-| CFP-FP | 91.00 |
+| CFP-FP | 91.90 |
 | AgeDB-30 | 91.95 |
 | CALFW | 92.60 |
 | CPLW | 86.07 |
 
 Accuracy was measured using 10-fold cross-validation.
+
+### 4.1 Dataset Sources
+The six face verification benchmarks (LFW, CFP-FF, CFP-FP, AgeDB-30, CALFW and CPLFW) were loaded from the `faces_webface_112x112.zip` archive stored in Google Drive.
+
+In Google Colab, the archive was extracted into `/content/data/faces_webface_112x112/`. The experiments used the benchmark `.bin` files from this directory.
+
+The original download source of the archive has not been confirmed. The dataset files are not included in this repository.
 
 ## 5. Robustness Experiments
 
