@@ -57,7 +57,7 @@ On the same 1,200 held-out LFW pairs
 | Method | Test Accuracy |
 |--------|---------------|
 | Majority-class baseline | 49.58% |
-| AdaFace IR18 | 98.56% |
+| AdaFace IR18 | 98.58% |
 
 ## 6. Repository Contents
 - comp1818_face_verification.ipynb - implementation, experiments, visualisations and evaluation results.
@@ -73,4 +73,5 @@ AdaFace IR18 demonstrated strong face verification performance under standard be
 ## 9. Acknowledgements
 The project uses the pretrained AdaFace model developed by Kim et al. (2022) 
 
-Original AdaFace repository: [InsightFace Datasets](https://github.com/deepinsight/insightface/tree/master/recognition/_datasets_)
+
+Original AdaFace repository: [AdaFace GitHub](https://github.com/mk-minchul/AdaFace)
