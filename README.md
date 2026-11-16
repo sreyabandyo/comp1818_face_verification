@@ -45,16 +45,16 @@ The model was evaluated using six face verification benchmark datasets:
 Accuracy was measured using 10-fold cross-validation.
 
 ### 4.1 Dataset Sources
-The six verification benchmarks (LFW, CFP-FF, CFP-FP, AgeDB-30, CALFW and CPLFW) were loaded as pre-aligned 112x112 `.bin` files from the 'faces_webface_112x112` archive. This is the InsightFace-provided dataset package (CASIA-WebFace, preprocessed to 112x112) that the official AdaFace repository's data preparation guide (`README_TRAIN.md`) direct users to: https://github.com/deepinsight/insightface/tree/master/recognition/_datasets_
+The six verification benchmarks (LFW, CFP-FF, CFP-FP, AgeDB-30, CALFW and CPLFW) were loaded as pre-aligned 112x112 `.bin` files from the `faces_webface_112x112` archive. This is the InsightFace-provided dataset package (CASIA-WebFace, preprocessed to 112x112) that the official AdaFace repository's data preparation guide (`README_TRAIN.md`) directs users to: https://github.com/deepinsight/insightface/tree/master/recognition/_datasets_
 
 Original benchmark papers:
-- LFW: Huang et el. (2007)
+- LFW: Huang et al. (2007)
 - CFP-FF / CFP-FP: Sengupta et al. (2016)
 - AgeDB-30: Moschoglou et al. (2017)
 - CALFW: Zheng, Deng and Hu (2017)
 - CPLFW: Zheng and Deng (2018)
 
-The dataset files are not included in this repository because of their size. To reproduce the results, download the archive from the link above and extract it to `/content/data/faces_webface_112x112/` in Google Colab (or update the path in the notebook).
+The dataset files are not included in this repository because of their size. To reproduce the results, download the archive from the link above (CASIA-WebFace entry) and extract it to `/content/data/faces_webface_112x112/` in Google Colab (or update the path in the notebook).
 
 ## 5. Robustness Experiments
 
