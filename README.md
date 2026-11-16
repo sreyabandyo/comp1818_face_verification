@@ -59,12 +59,12 @@ The dataset files are not included in this repository because of their size. To 
 ## 5. Robustness Experiments
 
 ### 5.1 Lighting Conditions
-Five brightness conditions were evaluated, ranging from very dark to very bright.
+Five brightness conditions were evaluated by multiplying pixel values by a factor and clipping to 0-255: Very Dark (0.3), Dark (0.6), Original (1.0), Bright (1.4) and Very Bright (1.8).
 
 Verification accuracy ranged from 98.62% to 99.23%, indicating relatively limited sensitivity to the simulated brightness changes.
 
 ### 5.2 Image Quality
-Gaussian blur was applied at increasing levels of intensity.
+Gaussian blur was applied using OpenCV's `GaussianBlur` with square kernels of 3 (Slight), 7 (Moderate), 11 (Strong) and 21 (Very Strong) pixels. Sigma was left at 0, so OpenCV derives it from the kernel size (approximately 0.8, 1.4, 2.0 and 3.5).
 
 Verification accuracy decreased from 99.23% on the original LFW benchmark to 92.53% under very strong blur, indicating that reduced image sharpness can affect verification reliability.
 
