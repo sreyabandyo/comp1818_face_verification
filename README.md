@@ -56,6 +56,19 @@ Original benchmark papers:
 
 The dataset files are not included in this repository because of their size. To reproduce the results, download the archive from the link above (CASIA-WebFace entry) and extract it to `/content/data/faces_webface_112x112/` in Google Colab (or update the path in the notebook).
 
+## How to Run
+The experiments were run in Google Colab (T4 GPU runtime).
+
+1. Open `comp1818_face_verification.ipynb` in Google Colab and select a GPU runtime (Runtime > Change runtime type > T4 GPU).
+2. Download the benchmark archive (see 4.1) and upload `faces_webface_112x112.zip` to the top level of your Google Drive ("My Drive"), so that it sits at `/content/drive/MyDrive/faces_webface_112x112.zip`. If you store it elsewhere, edit `zip_path` in the "3. Dataset Preparation" section of the notebook.
+3. Run the notebook cells from top to bottom. The notebook will:
+   - clone the official AdaFace repository to `/content/AdaFace`
+   - install `gdown` and download the pretrained IR18 CASIA-WebFace checkpoint to `/content/AdaFace/pretrained/adaface_ir18_casia.ckpt`
+   - mount Google Drive (you will be asked to authorise access)
+   - extract the archive to `/content/data/` (creating `/content/data/faces_webface_112x112/`)
+   - load the model, compute embeddings, then run the six-benchmark evaluation, the brightness and blur experiments, and the baseline comparison
+4. Results are printed in the notebook output. The six-benchmark results are also provided in `results_pretrained_ir18.csv` in this repository.
+
 ## 5. Robustness Experiments
 
 ### 5.1 Lighting Conditions
