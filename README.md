@@ -23,6 +23,13 @@ The experiments examine how variations in facial pose, age, lighting conditions 
 - Matplotlib
 - Google Colab
 
+### 3.3 Pretrained Weights
+The pretrained AdaFace IR18 checkpoint (trained on CASIA-WebFace) was downloaded from the "Pretrained Models" table (R18, CASIA-WebFace) in the official AdaFace repository (Kim et al., 2022): https://github.com/mk-minchul/AdaFace
+
+Checkpoint download: https://drive.google.com/file/d/1BURBDplf2bXpmwOL1WVzqtaVmQl9NpPe/view?usp=sharing
+
+No training or fine-tuning was performed. The pretrained model was used for inference only. Note that this model expects BGR input rather than RGB.
+
 ## 4. Benchmark Datasets
 The model was evaluated using six face verification benchmark datasets:
 
@@ -33,16 +40,21 @@ The model was evaluated using six face verification benchmark datasets:
 | CFP-FP | 91.90 |
 | AgeDB-30 | 91.95 |
 | CALFW | 92.60 |
-| CPLW | 86.07 |
+| CPLFW | 86.07 |
 
 Accuracy was measured using 10-fold cross-validation.
 
 ### 4.1 Dataset Sources
-The six face verification benchmarks (LFW, CFP-FF, CFP-FP, AgeDB-30, CALFW and CPLFW) were loaded from the `faces_webface_112x112.zip` archive stored in Google Drive.
+The six verification benchmarks (LFW, CFP-FF, CFP-FP, AgeDB-30, CALFW and CPLFW) were loaded as pre-aligned 112x112 `.bin` files from the 'faces_webface_112x112` archive. This is the InsightFace-provided dataset package (CASIA-WebFace, preprocessed to 112x112) that the official AdaFace repository's data preparation guide (`README_TRAIN.md`) direct users to: https://github.com/deepinsight/insightface/tree/master/recognition/_datasets_
 
-In Google Colab, the archive was extracted into `/content/data/faces_webface_112x112/`. The experiments used the benchmark `.bin` files from this directory.
+Original benchmark papers:
+- LFW: Huang et el. (2007)
+- CFP-FF / CFP-FP: Sengupta et al. (2016)
+- AgeDB-30: Moschoglou et al. (2017)
+- CALFW: Zheng, Deng and Hu (2017)
+- CPLFW: Zheng and Deng (2018)
 
-The original download source of the archive has not been confirmed. The dataset files are not included in this repository.
+The dataset files are not included in this repository because of their size. To reproduce the results, download the archive from the link above and extract it to `/content/data/faces_webface_112x112/` in Google Colab (or update the path in the notebook).
 
 ## 5. Robustness Experiments
 
@@ -52,7 +64,7 @@ Five brightness conditions were evaluated, ranging from very dark to very bright
 Verification accuracy ranged from 98.62% to 99.23%, indicating relatively limited sensitivity to the simulated brightness changes.
 
 ### 5.2 Image Quality
-Gaussian blue was applied at increasing levels of intensity.
+Gaussian blur was applied at increasing levels of intensity.
 
 Verification accuracy decreased from 99.23% on the original LFW benchmark to 92.53% under very strong blur, indicating that reduced image sharpness can affect verification reliability.
 
