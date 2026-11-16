@@ -19,7 +19,7 @@ The experiments examine how variations in facial pose, age, lighting conditions 
 - PyTorch
 - OpenCV
 - NumPy and Pandas
-- Sckit-learn
+- Scikit-learn
 - Matplotlib
 - Google Colab
 
